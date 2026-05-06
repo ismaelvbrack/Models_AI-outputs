@@ -44,14 +44,14 @@ Note that you also need to have installed JAGS software in your PC. You can down
 
 # 1. Data simulation
 
-In this example, we will simulate 40 camera-trap sites that are surveyed for 15 sequential occasions (e.g., 15 days). We will consider that a camera takes on average 6 photos per occasion. For simulating the occupancy probability, availability probability, TP rate and FP rate, we will add some heterogeneity in these parameters. Specifically, we assume that the occupancy probability has a positive relationship with a habitat covariate (e.g., forest); the availability probability has a positive relationship with a temporal covariate (e.g., temperature); the TP rate has a negative relationship with the same habitat covariate as occupancy; and we will include a site-level random effect for the FP rates. We first simulate the TP and FP detections of each image, at each occasion of each site, conditioned on the species occupancy and availability, to then simulate the object-level information containing the true class and confidence score.
+In this example, we will simulate 50 camera-trap sites that are surveyed for 15 sequential occasions (e.g., 15 days). We will consider that a camera takes on average 6 photos per occasion. For simulating the occupancy probability, availability probability, TP rate and FP rate, we will add some heterogeneity in these parameters. Specifically, we assume that the occupancy probability has a positive relationship with a habitat covariate (e.g., forest); the availability probability has a positive relationship with a temporal covariate (e.g., temperature); the TP rate has a negative relationship with the same habitat covariate as occupancy; and we will include a site-level random effect for the FP rates. We first simulate the TP and FP detections of each image, at each occasion of each site, conditioned on the species occupancy and availability, to then simulate the object-level information containing the true class and confidence score.
 
 ## Simulation settings
 
 First, we define the true values for the parameters and define the simulation settings for the sampling design:
 
 ```{r}
-nsites = 40 # number of sites
+nsites = 50 # number of sites
 nvisits = 15 # number of occasions / visits
 
 mean.img = 6 # average number of photos per occasion per site
